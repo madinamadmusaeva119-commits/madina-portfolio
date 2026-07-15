@@ -1,0 +1,461 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#fffdfd;
+color:#333;
+line-height:1.6;
+}
+
+/* =========================
+CONTAINER
+========================= */
+
+.container{
+width:90%;
+max-width:1100px;
+margin:auto;
+}
+
+.section{
+padding:70px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:2rem;
+margin-bottom:40px;
+color:#222;
+}
+
+/* =========================
+NAVBAR
+========================= */
+
+header{
+position:sticky;
+top:0;
+background:white;
+z-index:1000;
+border-bottom:1px solid #f4e4ea;
+}
+
+.navbar{
+max-width:1100px;
+margin:auto;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 20px;
+}
+
+.logo{
+font-weight:600;
+color:#ff6b9d;
+}
+
+.nav-links{
+display:flex;
+list-style:none;
+gap:20px;
+}
+
+.nav-links a{
+text-decoration:none;
+color:#444;
+font-size:0.95rem;
+}
+
+.nav-links a:hover{
+color:#ff6b9d;
+}
+
+/* =========================
+HOME
+========================= */
+
+.home{
+min-height:90vh;
+display:flex;
+align-items:center;
+}
+
+.home-container{
+display:grid;
+grid-template-columns:1fr 350px;
+gap:60px;
+align-items:center;
+}
+
+.badge{
+display:inline-block;
+background:#ffe8f0;
+color:#ff5d93;
+padding:8px 16px;
+border-radius:20px;
+margin-bottom:20px;
+font-size:0.9rem;
+}
+
+.home-text h1{
+font-size:3rem;
+margin-bottom:10px;
+}
+
+.home-text h2{
+color:#ff6b9d;
+font-size:1.2rem;
+margin-bottom:20px;
+}
+
+.home-text p{
+color:#666;
+margin-bottom:15px;
+}
+
+.home-buttons{
+margin-top:25px;
+display:flex;
+gap:15px;
+}
+
+.btn{
+text-decoration:none;
+padding:12px 24px;
+border-radius:25px;
+transition:.3s;
+}
+
+.primary-btn{
+background:#ff6b9d;
+color:white;
+}
+
+.primary-btn:hover{
+opacity:.9;
+}
+
+.secondary-btn{
+border:2px solid #ff6b9d;
+color:#ff6b9d;
+}
+
+.secondary-btn:hover{
+background:#ff6b9d;
+color:white;
+}
+
+.photo-box{
+width:320px;
+height:320px;
+border-radius:30px;
+background:#fff0f5;
+border:2px dashed #ffb6cc;
+
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+
+}
+
+.photo-box i{
+font-size:4rem;
+color:#ff6b9d;
+margin-bottom:10px;
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:900px){
+
+.nav-links{
+    display:none;
+}
+
+.home-container{
+    grid-template-columns:1fr;
+    text-align:center;
+}
+
+.home-buttons{
+    justify-content:center;
+}
+
+.photo-box{
+    margin:auto;
+}
+
+.home-text h1{
+    font-size:2.3rem;
+}
+
+}
+/* =========================
+CARDS
+========================= */
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:20px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.card i{
+font-size:2rem;
+color:#ff6b9d;
+margin-bottom:15px;
+}
+
+.card h3{
+margin-bottom:10px;
+font-size:1.1rem;
+}
+
+.card p{
+color:#666;
+font-size:0.95rem;
+}
+
+.card ul{
+list-style:none;
+}
+
+.card ul li{
+color:#666;
+margin-bottom:8px;
+}
+
+/* =========================
+ACHIEVEMENTS
+========================= */
+
+#achievements .card{
+text-align:center;
+}
+
+/* =========================
+SKILLS
+========================= */
+
+#skills .card{
+text-align:left;
+}
+
+/* =========================
+PROJECTS
+========================= */
+
+#projects .card{
+text-align:left;
+}
+
+.section-description{
+text-align:center;
+color:#666;
+max-width:650px;
+margin:0 auto 30px;
+}
+
+/* =========================
+EXPERIENCE
+========================= */
+
+#experience .card{
+text-align:left;
+}
+
+/* =========================
+LINKS IN CONTACT
+========================= */
+
+#contact a.card{
+text-decoration:none;
+color:inherit;
+}
+/* =========================
+TIMELINE
+========================= */
+
+.timeline{
+max-width:800px;
+margin:auto;
+position:relative;
+}
+
+.timeline::before{
+content:"";
+position:absolute;
+left:20px;
+top:0;
+width:3px;
+height:100%;
+background:#ffd4e2;
+}
+
+.timeline-item{
+position:relative;
+padding-left:60px;
+margin-bottom:35px;
+}
+
+.timeline-year{
+display:inline-block;
+background:#ff6b9d;
+color:white;
+padding:6px 14px;
+border-radius:20px;
+font-size:0.9rem;
+margin-bottom:10px;
+}
+
+.timeline-content{
+background:white;
+padding:20px;
+border-radius:16px;
+box-shadow:0 5px 20px rgba(0,0,0,0.05);
+}
+
+.timeline-content p{
+color:#666;
+}
+
+/* =========================
+WHY KOREA
+========================= */
+
+#why-korea .card{
+max-width:800px;
+margin:auto;
+text-align:center;
+}
+
+#why-korea p{
+font-size:1rem;
+color:#666;
+}
+
+/* =========================
+GKS GOALS
+========================= */
+
+#gks-goals .card{
+text-align:center;
+}
+
+/* =========================
+CONTACT
+========================= */
+
+#contact .grid{
+max-width:900px;
+margin:auto;
+}
+
+#contact .card{
+text-align:center;
+}
+
+#contact .card i{
+font-size:2.2rem;
+}
+
+/* =========================
+FOOTER
+========================= */
+
+footer{
+margin-top:50px;
+padding:25px;
+text-align:center;
+border-top:1px solid #f3e3ea;
+background:#fff8fa;
+}
+
+footer p{
+color:#777;
+font-size:0.9rem;
+}
+
+/* =========================
+SMALL ANIMATION
+========================= */
+
+.card{
+transition:all .3s ease;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 12px 30px rgba(255,107,157,0.12);
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media(max-width:768px){
+
+.section{
+    padding:50px 0;
+}
+
+.section-title{
+    font-size:1.7rem;
+}
+
+.grid{
+    grid-template-columns:1fr;
+}
+
+.timeline-item{
+    padding-left:45px;
+}
+
+}
+.video-link{
+    display:inline-block;
+    margin-top:12px;
+    text-decoration:none;
+    color:#ff6b9d;
+    font-weight:600;
+}
+
+.video-link:hover{
+    opacity:0.8;
+}
+.project-image {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    display: block;
+    margin: 0 auto 15px;
+}
+.profile-photo{
+    width:250px;
+    height:250px;
+    object-fit:cover;
+    border-radius:20px;
+}
